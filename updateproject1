@@ -1,0 +1,462 @@
+#include <stdio.h>
+ void *strcmp();
+struct login
+{
+ char name[20];
+ char pass[20];
+}n1;
+
+struct java 
+{
+	
+	 char name[20],con[21],pay[20];
+}n3;
+
+struct php
+{
+	char name1[20],con2[20],pay2[20];
+  
+}n4;
+
+struct python
+{
+    char name3[20],con3[20],pay3[20];
+     	
+}n5;
+struct clanguage
+{
+	 char name4[20],con4[20],pay4[20];
+	 
+}n6;
+
+struct linux
+{
+	
+  char name5[20],con5[20],pay5[20];
+    
+}n7;
+
+
+    
+main() //SIGN UP PAGE
+{
+		char i;
+    printf("\n \t \t \t SIGN UP FORM ");
+    
+    char username[20],password[21];
+ int  t=0,n2;
+  
+
+    FILE *fp1,*fp2,*fp3,*fp4,*fp5;
+    fp1=fopen("sample1.txt","a");
+     
+     printf("\n Enter UserName:-\t ");
+     scanf("%s",n1.name);
+     printf("\n  Enter PassWord:-\t");
+     scanf("%s",n1.pass); 
+
+     fprintf(fp1,"\n\n %s \n\n%s",n1.name,n1.pass);
+     printf("\n \n SIGN UP SUCCESS");
+     fclose(fp1); 
+     
+     printf("\n *****************\n");
+    printf("\n \n Login Now:-\t ");
+     //LOGINPAGE
+     
+  char again;
+  char ch3;
+
+    printf("\n \n Enter User Name:-\t");
+    scanf("%s",username);
+    printf("\n Enter PassWord:-\t");
+    scanf("%s",password);
+
+   
+    fp1=fopen("sample1.txt","a");
+    fscanf( fp1, "\n  %s %s ",n1.name,n1.pass);
+    printf("\n  UserName=%s \n  PassWord=%s",  n1.name,n1.pass);
+
+ //COMAPRING US&PASS
+    if (((strcmp (n1.name,username)==0)) && ((strcmp(n1.pass,password)==0)))
+    {
+  
+      printf("\n \n  Login Success");
+   printf("\n \n \n \t \t BCA COURSE DETAILS\n ");
+    
+   int ch1; 
+   
+    char ch3,ch4;
+    // MENU DRIVEN 
+   do {
+   printf("\n\nSelect 1 For Java");
+   printf("\n\nSelect 2 For Php");
+   printf("\n\nSelect 3 For Python" );
+   printf("\n\nSelect 4 For C Language" );
+   printf("\n\nSelect 5 For Linux");
+    printf("\n\nSelect 6 For show data");
+
+    printf("\n\nEnter Your  Choice:-\t");
+    
+    scanf("%d",&ch1);
+
+    switch(ch1)    
+
+    {
+      case 1: 
+     
+     printf("\t \t \t Thanks For Choosing Java");
+     printf("\n\nJAVA was developed by james gosling at sun microsystem in the year 1995");
+     printf("\n\nit is a simple programming language java makes writing compiling and debugging and make it easy");
+    printf("\n\nit helps to create reusable code and modular programs java is class bases oriented programming");          
+    printf("\n\njava code run on all platforms that supports java applcation are compiled ");
+   printf("\n\njava being completency object oriented even supports sub classes functios such as JAVA");
+     
+     
+     printf("\n\n\t\t\t COURSE DURATION \t= 3 MONTHS");
+     printf("\n\n\t\t\t COURSE FEES\t = 500 RS PER MONTH");
+     
+     printf("\n\n\t\t\t TOTAL FEES\t = 500*3=1500RS PER MONTH");
+
+     
+
+     printf("\n\n\t\t\t COLLEGE TIMIMG\t= 7.00AM TO 12.00PM (MON TO SAT)");
+
+     printf("\n\n\t\t\t ADDRESS\t= THANE WEST STATION RAOD ,400601");
+
+     printf("\n\n\t\t\t PAYMENT METHOD WE ACCEPT\t= CASH/ONLINE/E-BANKING/CHEQUE/NEFT/IMPS");
+   
+         printf("\n \n Do You Want To Take Admission:-\t");
+      fflush(stdin);
+      scanf("%c",&ch3);    
+      
+    //SAVING IN FILE
+       char name[20],con[21],pay[20];
+       
+   
+     
+     fp1=fopen("java.txt","a");   
+     
+     printf("\n \n \t\t\t ADMISSION FORM"); 
+     
+      printf("\n \n ENTER NAME :-\t");
+      scanf("%s",n3.name);
+      printf("\n \n ENTER CONTACT NUMBER:-\t");
+      scanf("%s",n3.con);
+      printf("\n \n PAYMENT METHOD:-\t");
+      scanf("%s",n3.pay);
+       
+       //PRINTING IN FILE
+       fprintf(fp1,"\n\nNAME=\t%s",n3.name);
+       
+       fprintf(fp1,"\n \nCONTACT NUMBER=\t%s",n3.con); 
+       
+        fprintf(fp1,"\n\nPAYMENT METHOD=\t%s",n3.pay);
+        
+       printf("\n\n\t\t\tNAME=%s",n3.name);
+        printf("\n\n\t\t\tCONTACT NUMBER=%s",n3.con);
+         printf("\n\n\t\t\tPAYMENT METHOD=%s",n3.pay);
+       printf("\n\n\t\t\t DATA HAS BEEN SAVED");
+
+      printf("\n \n\n \t do you want to take admission in another course:-\t");
+      fflush(stdin);
+      scanf("%c",&ch3);    
+      
+         fclose(fp1);
+    
+    break;
+    
+  case 2: printf("\n\n\n \t \t\t THANKS FOR CHOOSING PHP");
+   printf("\n\nPHP IS A SERVER SIDE SCRIPTING LANGUAGE THAT IS EMBEDED");
+     printf("\n\nIT IS USED TO MANAGAE  DYNAMICS CONTENT ,DATABASES,SESSIONS");
+   printf("\n\nIT IS INTEGRATED WITH A NUMBER OF POPULAR DATABASE ");
+   printf("\n\nPHP IS ZIPPY IN ITS EXECUTON ESPECIALLY WHEN COMPILED S AN APCHE");
+   printf("\n\nPHP SUPPORTS A LARGE NUMBER OF MAJOR PROTOCOLS SUC AS POP3,IMAP AND LDAP");
+
+    printf("\n\n\t\t\t COURSE DURATION \t= 3 MONTHS");
+     printf("\n\n\t\t\t COURSE FEES\t = 500 RS PER MONTH");
+     
+     printf("\n\n\t\t\t TOTAL FEES\t = 500*3=1500RS PER MONTH");
+
+     
+
+     printf("\n\n\t\t\t COLLEGE TIMIMG\t= 7.00AM TO 12.00PM (MON TO SAT)");
+
+     printf("\n\n\t\t\t ADDRESS\t= THANE WEST STATION RAOD ,400601");
+
+     printf("\n\n\t\t\t PAYMENT METHOD WE ACCEPT\t= CASH/ONLINE/E-BANKING/CHEQUE/NEFT/IMPS");
+   
+       printf("\n \n Do You Want To Take Admission");
+
+      fflush(stdin);
+      scanf("%c",&ch3);    
+      
+
+  char name1[20],con2[20],pay2[20];
+  
+     fp1=fopen("php.txt","a"); 
+     printf("\n \n \t\t\t ADMISSION FORM");    
+      printf("\n\n ENTER NAME:-\t");
+      scanf("%s",n4.name1);
+      printf("\n\n ENTER CONTACT NUMBER:-\t");
+      scanf("%s",n4.con2);
+      printf("\n\n PAYMENT METHOD");
+      scanf("%s",n4.pay2);
+     
+       fprintf(fp1,"\n\nSTUDENT NAME=%s",n4.name1);
+       fprintf(fp1,"\n\nCONTACT NUMBER=%s",n4.con2);
+        fprintf(fp1,"\n\nPAYMENT METHOD=%s",n4.pay2);
+       
+       
+
+       printf("\n\n\t\t\t STUDENT NAME=%s ",n4.name1);
+       printf("\n\n\n\t\t\tCONTACT NUMBER=%s",n4.con2);
+        printf("\n\n\n\t\t\tPAYMENT METHOD=%s",n4.pay2);
+
+
+  printf("\n  Do You Want to Take Another Admission");
+      fflush(stdin);
+      scanf("%c",&ch3);  
+      fclose(fp1); 
+    break;
+
+  case 3:
+   printf("\n\n\n\t\t\tTHANKS FOR CHOOSING PYTHON");
+   printf("\n\nPYTHON CAN BE USED ON AS SERVER TO CREATE WEB APPLICATION");
+   printf("\n\nPYTHON CAN BE USED ALONGSIDE SOFTWARE TO CREATE WORKSFLOWS");
+   printf("\n\nPYTHONS WORKS ON DIFFERENT PLATFORMS WINDOWS,MACS,LINUX");
+   printf("\n\nTHE MOST RECENT VERSION OF PYTHON IS 3 WHIC SHALL BE USING IN TOTORIAL");
+   printf("\n\nPYTHONS RUNS ON AN INTERPRETER SYSTEM MEANINGTHAT CODE BE RUN WHILE COMPILE");
+    
+     printf("\n\n\t\t\t COURSE DURATION \t= 3 MONTHS");
+     printf("\n\n\t\t\t COURSE FEES\t = 500 RS PER MONTH");
+     
+     printf("\n\n\t\t\t TOTAL FEES\t = 500*3=1500RS PER MONTH");
+
+     
+
+     printf("\n\n\t\t\t COLLEGE TIMIMG\t= 7.00AM TO 12.00PM (MON TO SAT)");
+
+     printf("\n\n\t\t\t ADDRESS\t= THANE WEST STATION RAOD ,400601");
+
+     printf("\n\n\t\t\t PAYMENT METHOD WE ACCEPT\t= CASH/ONLINE/E-BANKING/CHEQUE/NEFT/IMPS");
+
+     
+       printf("\n \n Do You Want To Take Admission");
+
+      fflush(stdin);
+      scanf("%c",&ch3);    
+      
+
+  char name3[20],con3[20],pay3[20];
+     
+     fp1=fopen("phython.txt","a");    
+      printf("\n \n \t\t\t ADMISSION FORM");  
+      printf("\n\n ENTER NAME:-\t");
+      scanf("%s",n5.name3);
+      printf("\n\n ENTER CONTACT NUMBER:-\t");
+      scanf("%s",n5.con3);
+      printf("\n\nPAYMENT METHOD:-\t");
+      scanf("%s",n5.pay3);
+     
+       fprintf(fp1,"\n\nSTUDENT NAME=%s",n5.name3);
+       fprintf(fp1,"\n\nCONTACT NUMBER=%s",n5.con3);
+        fprintf(fp1,"\n\nPAYMENT METHOD=%s",n5.pay3);
+       
+       
+
+       printf("\n\n\t\t\t STUDENT NAME=%s ",n5.name3);
+       printf("\n\n\n\t\t\tCONTACT NUMBER=%s",n5.con3);
+        printf("\n\n\n\t\t\tPAYMENT METHOD=%s",n5.pay3);
+
+    
+  printf("\n\n  Do You Want to Take Another Admission");
+    fflush(stdin);
+      scanf("%c",&ch3);  
+      fclose(fp1); 
+   break;
+
+  case 4:
+   printf("\n\n\n\t\t\tTHANKS FOR CHOOSING C Language");
+   printf("\n\nC LANGAUGE WAS DEVELOPED BY DENNIS RITHIE N 1972");
+   printf("\n\nIN AT AND T BELLS LABORATORIES C IS VERY OLD LANGUAGE");
+   printf("\n\nC HAS 32 KEYWORDS IN BUILT FUNCTIONS");
+   printf("\n\nC HAS GROWN POPULARITY IN THE LAST FEW YEARS IN THE BCA COURSE");
+   printf("\n\nADVANED FEATURES INCLUDING FUNCTIONS OF ARRAYS ,LOOPS,POINTERS ETC..");
+   printf("\n\nA DETAILED SYSTEMATIC STUDY OF DATA TYPES CONTROLS IN INPUTS/OUTPUTS");
+
+   printf("\n\n\t\t\t COURSE DURATION \t= 3 MONTHS");
+     printf("\n\n\t\t\t COURSE FEES\t = 500 RS PER MONTH");
+     
+     printf("\n\n\t\t\t TOTAL FEES\t = 500*3=1500RS PER MONTH");
+
+     
+
+     printf("\n\n\t\t\t COLLEGE TIMIMG\t= 7.00AM TO 12.00PM (MON TO SAT)");
+
+     printf("\n\n\t\t\t ADDRESS\t= THANE WEST STATION RAOD ,400601");
+
+     printf("\n\n\t\t\t PAYMENT METHOD WE ACCEPT\t= CASH/ONLINE/E-BANKING/CHEQUE/NEFT/IMPS");
+
+     
+   printf("\n \n Do You Want To Take Admission");
+
+      fflush(stdin);
+      scanf("%c",&ch3);    
+      
+
+  char name4[20],con4[20],pay4[20];
+
+     fp1=fopen("clanguage.txt","a");    
+      printf("\n \n \t\t\t ADMISSION FORM");  
+      printf("\n\n ENTER NAME:-\t");
+      scanf("%s",n6.name4);
+      printf("\n\n ENTER CONTACT NUMBER:-\t");
+      scanf("%s",n6.con4);
+      printf("\n\nPAYMENT METHOD:-\t");
+      scanf("%s",n6.pay4);
+     
+       fprintf(fp1,"\n\nSTUDENT NAME=%s",n6.name4);
+       fprintf(fp1,"\n\nCONTACT NUMBER=%s",n6.con4);
+        fprintf(fp1,"\n\nPAYMENT METHOD=%s",n6.pay4);
+       
+       
+
+       printf("\n\n\t\t\t STUDENT NAME=%s ",n6.name4);
+       printf("\n\n\n\t\t\tCONTACT NUMBER=%s",n6.con4);
+        printf("\n\n\n\t\t\tPAYMENT METHOD=%s",n6.pay4);
+
+    
+  printf("\n\n  Do You Want to Take Another Admission");
+    fflush(stdin);
+      scanf("%c",&ch3);  
+      
+      fclose(fp1); 
+   break;
+
+  case 5:
+  printf("\n\n\n\t\t\tTHANKS FOR CHOOSING LINUX");
+  printf("\n\nLINUX IS A COMMUNITY OF OPEN SOURCE BASED UNIX LIKE OPERATING SYSTEM");
+  printf("\n\nTHAT ARE BASED ON LINUX KERNEL WAS INITALLY STARTED IN SEP 17 1991");
+  printf("\n\nIT IS A FREE AND OPEN SOURCE OPERATING SYSTEM THAT CAN BE MODIFIED ");
+  printf("\n\nTO ANYONE COMMERICALLY UNDER GNU GENERAL PUBLIC LICENSE....");
+  printf("\n\nLINUX WAS CREATED PERSONAL COMPUTERS AND GADUALLY IN OTHER MACHINE MAINFRAME ETC....");
+
+
+   printf("\n\n\t\t\t COURSE DURATION \t= 3 MONTHS");
+     printf("\n\n\t\t\t COURSE FEES\t = 500 RS PER MONTH");
+     
+     printf("\n\n\t\t\t TOTAL FEES\t = 500*3=1500RS PER MONTH");
+
+     
+
+     printf("\n\n\t\t\t COLLEGE TIMIMG\t= 7.00AM TO 12.00PM (MON TO SAT)");
+
+     printf("\n\n\t\t\t ADDRESS\t= THANE WEST STATION RAOD ,400601");
+
+     printf("\n\n\t\t\t PAYMENT METHOD WE ACCEPT\t= CASH/ONLINE/E-BANKING/CHEQUE/NEFT/IMPS");
+
+     printf("\n \n Do You Want To Take Admission");
+
+      fflush(stdin);
+      scanf("%c",&ch3);    
+      
+
+  char name5[20],con5[20],pay5[20];       
+  
+    
+     fp1=fopen("linux.txt","a");    
+      printf("\n \n \t\t\t ADMISSION FORM");  
+      printf("\n\n ENTER NAME:-\t");
+      scanf("%s",n7.name5);
+      printf("\n\n ENTER CONTACT NUMBER:-\t");
+      scanf("%s",n7.con5);
+      printf("\n\nPAYMENT METHOD:-\t");
+      scanf("%s",n7.pay5);
+     
+       fprintf(fp1,"\n\nSTUDENT NAME=%s",n7.name5);
+       fprintf(fp1,"\n\nCONTACT NUMBER=%s",n7.con5);
+        fprintf(fp1,"\n\nPAYMENT METHOD=%s",n7.pay5);
+       
+       
+
+       printf("\n\n\t\t\t STUDENT NAME=%s ",n7.name5);
+       printf("\n\n\n\t\t\tCONTACT NUMBER=%s",n7.con5);
+        printf("\n\n\n\t\t\tPAYMENT METHOD=%s",n7.pay5);
+
+    
+  printf("\n\n  Do You Want to Take Another Admission");
+    fflush(stdin);
+      scanf("%c",&ch3);  
+      fclose(fp1); 
+   break;  
+   
+   
+   case 6 :		
+	 
+fp1= fopen("java.txt", "r");
+fp2= fopen("php.txt", "r");
+fp3= fopen("phython.txt", "r");
+fp4= fopen("clanguage.txt", "r");
+fp5= fopen("linux.txt", "r");
+
+if(fp1 == NULL)
+
+{
+printf("Cannot open source file");
+
+}
+//i = fgetc(fp1);
+printf("\n\n \t\t JAVA DETAIL \t\t \n\n");
+while((i = fgetc(fp1)) != (char)EOF)
+printf("%c", i);
+printf("%c", i);
+
+// = fgetc(fp2);
+
+printf("\n\n \t\t PHP DETAIL \t\t \n\n");
+while((i = fgetc(fp2)) != (char)EOF)
+printf("%c", i);
+printf("%c", i);
+
+//i = fgetc(fp3);
+printf("\n\n \t\t PYTHON DETAIL \t\t \n\n");
+while((i = fgetc(fp3)) != (char)EOF)
+printf("%c", i);
+printf("%c", i);
+
+//i=fgetc(fp4);
+printf("\n\n \t\t C LANGUAGE DETAIL \t\t \n\n");
+while((i = fgetc(fp4)) != (char)EOF)
+printf("%c", i);
+printf("%c", i);
+
+printf("\n\n \t\t LINUX DETAIL \t\t \n\n");
+while((i = fgetc(fp5)) != (char)EOF)
+printf("%c", i);
+printf("%c", i);
+
+
+
+fclose(fp1);
+fclose(fp2);
+fclose(fp3);
+fclose(fp4);
+fclose(fp5);
+
+break;
+
+  }
+
+   } while ((ch3=='y')||(ch3=='Y'));   
+     
+   
+} //if
+  
+   else 
+    {    
+        printf("\n Wrong  Login Please Enter Correct Details");
+           
+    }
+     
+  } 
+ 
